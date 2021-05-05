@@ -1,0 +1,1226 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#"
+     xml:base="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot/1.0"/>
+        <rdfs:comment>The ontology to help choose and buy real estate.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#builds -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#builds">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#cooperates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#cooperates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bank"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#forSale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#forSale">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#gives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#gives">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bank"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasGeneralKnowledge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasGeneralKnowledge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Top_Level_Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasINFO -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasINFO">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Commercial_Estate_Info"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Household_Activities"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage_Info"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLayout -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLayout">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSingleItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSingleItem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Top_Level_Class"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTerm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTerm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTip">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Design_Repair_Tip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#inCloseProximity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#inCloseProximity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_center"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Gyms"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kindergartens"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Metro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Pharmacies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Schools"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Shops"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Universities"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Сlinics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#locatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#locatedAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Metro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_District"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#participates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#participates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#relatedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#relevantTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#relevantTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Attic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Basements"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Condition_of_place_and_structures"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Crime_level"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Facade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Heating_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#House_condition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Illegal_trading"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Payments"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Plumbing_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Public_services"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Roof"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Banks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Banks"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasAccreditation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasAccreditation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Location"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasApartmentArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasApartmentArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasAppartament -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasAppartament">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasBuildingNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasBuildingNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasCeilingHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasCeilingHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasClassOfHome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasClassOfHome">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasConstructionYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasConstructionYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasContractType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasContractType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasDistanceFromEstate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasDistanceFromEstate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#infrastructurePoints"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Gyms"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kindergartens"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Metro"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Pharmacies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Schools"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Shops"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Universities"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Сlinics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasDistrict -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasDistrict">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Location"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasFinishType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasFinishType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasFoundingYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasFoundingYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Banks"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bank"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasFurniture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasFurniture">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Balcony"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bathroom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bedroom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kitchen"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Living_rooms"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasHouseType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasHouseType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasHousesBuilt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasHousesBuilt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasInfrastructureAssessmentCat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasInfrastructureAssessmentCat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_District"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLIRA_test_bad_ranges -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLIRA_test_bad_ranges">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLayout_bad_ranges -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLayout_bad_ranges">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLegalDocuments -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasLegalDocuments">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasMinPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasMinPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasMinPriceMetr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasMinPriceMetr">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasNFloors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasNFloors">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Banks"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#infrastructurePoints"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bank"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_District"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Metro"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasNumberOfBuildings -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasNumberOfBuildings">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasNumberOfRooms -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasNumberOfRooms">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasOsobennosti -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasOsobennosti">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasParkingDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasParkingDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasParkingInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasParkingInfo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasParkingSpace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasParkingSpace">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPaybackForecast -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPaybackForecast">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPhoto_bad_ranges -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPhoto_bad_ranges">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPricePerMeter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasPricePerMeter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasRegion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Location"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasRentalCostCat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasRentalCostCat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasReviewInfrastructure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasReviewInfrastructure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#infrastructurePoints"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Gyms"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kindergartens"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Pharmacies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Schools"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Shops"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Universities"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Сlinics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasReviews -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasReviews">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSecretReview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSecretReview">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#HousingEstate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSellingPriceCat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSellingPriceCat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSquare -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasSquare">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat_layout"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Balcony"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bathroom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bedroom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kitchen"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Living_rooms"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTransportAccessibilityCat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTransportAccessibilityCat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#fromYandexMap"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_District"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTypeParks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasTypeParks">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasWayOfPayment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasWayOfPayment">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasnNearestMetro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#hasnNearestMetro">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Location"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#infrastructurePoints -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#infrastructurePoints">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Attic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Attic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Balcony -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Balcony">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Basements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Basements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bathroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bedroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bedroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bus_Stop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Bus_Stop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_District -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_District">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#City_center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Comercial_estate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Commercial_Estate_Info -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Commercial_Estate_Info">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Condition_of_place_and_structures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Condition_of_place_and_structures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Crime_level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Crime_level">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Design_Repair_Tip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Design_Repair_Tip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Developer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Documents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Top_Level_Class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Facade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Facade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Flat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Gyms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Gyms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Heating_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Heating_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#House_condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#House_condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Household_Activities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Household_Activities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_estate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Illegal_trading -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Illegal_trading">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kindergartens -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kindergartens">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Top_Level_Class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Living_rooms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Living_rooms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Metro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Metro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage_Info -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Mortgage_Info">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Parking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Payments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Payments">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Pharmacies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Pharmacies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Plumbing_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Plumbing_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Promotions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Estate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Public_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Public_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Railway_station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Railway_station">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Roof -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Roof">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Schools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Schools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Shops -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Shops">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Street_infrasructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Street_infrasructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Housing_and_communal_services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Term -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Term">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Top_Level_Class -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Top_Level_Class"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Universities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Universities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Apartment_layout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Сlinics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Сlinics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aleksandr/ontologies/2021/0/real_estate_bot#Infrastructure"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
